@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?android:windowBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/setTime"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:text="设置时间:"/>
+        <EditText
+            android:id="@+id/setHour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:hint="时"/>
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:text=" : "/>
+        <EditText
+            android:id="@+id/setMin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:hint="分"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bgImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/bg_place" />
+
+    <LinearLayout
+        android:layout_below="@+id/setTime"
+        android:layout_marginTop="8dp"
+        android:id="@+id/itemTitle"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="标题 :"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="27sp"/>
+
+        <EditText
+            android:id="@+id/titleAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="27sp"
+            android:text=""/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/itemContent"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/itemTitle"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="内容  :"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:textSize="22sp"/>
+
+
+        <EditText
+            android:id="@+id/contentAdd"
+            android:layout_width="match_parent"
+            android:textSize="22sp"
+            android:layout_height="match_parent"
+            android:enabled="true"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:minLines="20"
+            android:scrollbars="vertical"
+            android:background="@android:drawable/edit_text"
+            android:text=""
+            android:hint="需要输入的内容："
+        >
+    </EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/setBtn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/itemContent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:text="设置闹钟" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setBtn"
+        android:layout_marginStart="160dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="保存" />
+
+</RelativeLayout>
